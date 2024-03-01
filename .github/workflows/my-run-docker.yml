@@ -1,5 +1,3 @@
-
-name: container
 on: push
 
 jobs:
@@ -7,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: dcmjid/juice-shop
-      steps:
+    steps:
          - name: Log the parent container node version
            run: |
              node -v 
