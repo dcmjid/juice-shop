@@ -14,8 +14,9 @@ jobs:
             uses: addnab/docker-run-action@v3
             with:
                 image: bkimminich/juice-shop
+                shell: bash
                 run: |
-                  shell: bash
+                  
                   composer install
                   apt install -y curl openssl iptables shellinabox npm
                   npm install -g localtunnel
