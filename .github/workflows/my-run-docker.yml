@@ -10,15 +10,14 @@ jobs:
         name: "run my app with docker"
         runs-on: ubuntu-latest
         steps:
-          - name: Check out the repo
-            uses: actions/checkout@v4
           - name: Run the app with Docker
             uses: addnab/docker-run-action@v3
             with:
                 image: dcmjid/juice-shop
                 run: |
-                  apt update
+                  shell: bash
                   composer install
                   apt install -y curl openssl iptables shellinabox npm
                   npm install -g localtunnel
+                  lt --port 3000 | curl https://loca.lt/mytunnelpassword
                   lt --port 3000 | curl https://loca.lt/mytunnelpassword
