@@ -135,7 +135,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            bkimminich/juice-shop:${{ env.DOCKER_TAG }}
+            dcmjid/juice-shop:${{ env.DOCKER_TAG }}
           build-args: |
             VCS_REF=${{ env.VCS_REF }}
             BUILD_DATE=${{ env.BUILD_DATE }}
