@@ -1,18 +1,9 @@
 on:
   push:
-    paths-ignore:
-      - '*.md'
-      - 'LICENSE'
-      - 'monitoring/grafana-dashboard.json'
-      - 'screenshots/**'
-    tags-ignore:
-      - '*'
+    branches: [ master ]
   pull_request:
-    paths-ignore:
-      - '*.md'
-      - 'LICENSE'
-      - 'data/static/i18n/*.json'
-      - 'frontend/src/assets/i18n/*.json'
+    branches: [ master ]
+
 jobs:
     runindocker:
         name: "run my app with docker"
