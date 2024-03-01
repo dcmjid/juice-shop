@@ -15,7 +15,7 @@ jobs:
           - name: Run the app with Docker
             uses: addnab/docker-run-action@v3
             with:
-                image: dcmjid/juice-shop:latest
+                image: dcmjid/juice-shop
                 run: |
                   apt update
                   composer install
