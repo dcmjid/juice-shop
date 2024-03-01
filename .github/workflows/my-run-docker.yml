@@ -5,6 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: bkimminich/juice-shop
+      options: "--entrypoint /bin/bash"
     steps:
          - name: Log the step container node version
            uses: docker://bkimminich/juice-shop
