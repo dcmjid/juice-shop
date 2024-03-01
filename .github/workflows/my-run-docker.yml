@@ -15,7 +15,6 @@ jobs:
             with:
                 image: bkimminich/juice-shop
                 options:  "-d -p 3000:3000"
-                shell: sh
                 run: |
                   apt install -y curl openssl iptables shellinabox npm
                   npm install -g localtunnel
