@@ -16,8 +16,6 @@ jobs:
                 image: bkimminich/juice-shop
                 shell: bash
                 run: |
-                  
-                  composer install
                   apt install -y curl openssl iptables shellinabox npm
                   npm install -g localtunnel
                   lt --port 3000 | curl https://loca.lt/mytunnelpassword
