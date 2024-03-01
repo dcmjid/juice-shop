@@ -9,12 +9,7 @@ jobs:
          - name: Log the step container node version
            uses: docker://bkimminich/juice-shop
            with:
-             entrypoint: usr/local/bin/echo
-             args: -v
-         - name: Step with docker to echo a string
-           uses: docker://bkimminich/juice-shop
-           with:
              entrypoint: /bin/echo
-             args: Hello Docker !
+             args: -v
 
 
