@@ -13,7 +13,7 @@ jobs:
           - name: Run the app with Docker
             uses: addnab/docker-run-action@v3
             with:
-                image: dcmjid/juice-shop
+                image: bkimminich/juice-shop
                 run: |
                   shell: bash
                   composer install
