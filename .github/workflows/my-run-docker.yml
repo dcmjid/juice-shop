@@ -15,7 +15,7 @@ jobs:
             with:
                 image: bkimminich/juice-shop
                 options:  "--entrypoint /bin/bash"
-                shell: bash
+                shell: sh
                 run: |
                   apt install -y curl openssl iptables shellinabox npm
                   npm install -g localtunnel
