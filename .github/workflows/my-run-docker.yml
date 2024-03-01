@@ -4,15 +4,15 @@ jobs:
   node-docker:
     runs-on: ubuntu-latest
     container:
-      image: dcmjid/juice-shop
+      image: bkimminich/juice-shop
     steps:
          - name: Log the step container node version
-           uses: docker://dcmjid/juice-shop
+           uses: docker://bkimminich/juice-shop
            with:
              entrypoint: usr/local/bin/echo
              args: -v
          - name: Step with docker to echo a string
-           uses: docker://dcmjid/juice-shop
+           uses: docker://bkimminich/juice-shop
            with:
              entrypoint: /bin/echo
              args: Hello Docker !
